@@ -2,7 +2,7 @@
   "name": "t9decoder",
   "version": "0.0.1",
   "description": "A T9 Decoder for node js",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "grunt test"
   },
