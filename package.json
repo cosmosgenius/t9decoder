@@ -1,0 +1,19 @@
+{
+  "name": "t9decoder",
+  "version": "0.0.1",
+  "description": "A T9 Decoder for node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http"
+  },
+  "keywords": [
+    "t9",
+    "decoder"
+  ],
+  "author": "Sharat M R",
+  "license": "MIT"
+}
