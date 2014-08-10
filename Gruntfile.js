@@ -32,11 +32,17 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            express: {
-                files: ['**/*.js', '!**/node_modules/**'],
+            library: {
+                files: ['src/**/*.js', '!**/node_modules/**'],
                 tasks: ['mochaTest'],
                 options: {
                     nospawn: true //Without this option specified express won't be reloaded
+                }
+            },
+            configFiles: {
+                files: ['Gruntfile.js', 'config/*.js'],
+                options: {
+                    reload: true
                 }
             }
         }
