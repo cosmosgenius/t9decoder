@@ -15,5 +15,13 @@
     "decoder"
   ],
   "author": "Sharat M R",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.11.0",
+    "should": "^4.0.4",
+    "travis-cov": "^0.2.5"
+  }
 }
