@@ -1,6 +1,6 @@
 /*jslint node: true */
 /*jshint expr: true*/
-/*global describe, it, before*/
+/*global describe, it*/
 'use strict';
 
 var should = require('should'),
@@ -12,6 +12,10 @@ describe('t9', function() {
     });
 
     it('should return a', function(){
-        t9(3).should.equal('a');
+        t9('2').should.equal('a');
+    });
+
+    it('should return multunus', function(){
+        t9('6885558 8866887777').should.equal('multunus');
     });
 });
