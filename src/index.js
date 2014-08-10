@@ -1,5 +1,10 @@
 /*jslint node: true */
 'use strict';
+
+/**
+ * A Map holding mapping of number to letter in a T9 keypad
+ * @type {Map}
+ */
 var t9Map = {
     '2':['a','b','c'],
     '3':['d','e','f'],
@@ -12,6 +17,17 @@ var t9Map = {
     '0':[' ']
 };
 
+
+/**
+ * findRepeatValue finds the number of times a value has repeated
+ * in a continuous order 
+ * @param  {Array} array :Input array in which the repeat value is to be found
+ * @return {Array}       An array with each object in the following format
+ *                          {
+ *                              number : <value repeating>,
+ *                              repeat : <number of times it is repeated>
+ *                          }
+ */
 function findRepeatValue(array){
     return array.reduce(function(previous, current){
         var last;
@@ -37,6 +53,11 @@ function findRepeatValue(array){
     },[]);
 }
 
+/**
+ * t9decode function return the string value of the t9 encoded number
+ * @param  {String} value :Encoded t9 value
+ * @return {String}       :Decocded t9 value
+ */
 function t9decode (value) {
     var valueArray = value.split('');
     var repeatMap = findRepeatValue(valueArray);
