@@ -61,12 +61,21 @@ function findRepeatValue(array){
 function t9decode (value) {
     var valueArray = value.split('');
     var repeatMap = findRepeatValue(valueArray);
+    var makeCaps = false;
     var stringArray = repeatMap.reduce(function(previous, current){
-        if ( current.number === ' '){
+        if ( current.number === ' ' ){
+            return previous;
+        }
+        if ( current.number === '#' ){
+            makeCaps = true;
             return previous;
         }
         var numberArray = t9Map[current.number];
         var value = numberArray[current.repeat - 1];
+        if(makeCaps) {
+           value = value.toUpperCase();
+           makeCaps = false;  
+        }
         previous.push(value);
         return previous;
     },[]);
